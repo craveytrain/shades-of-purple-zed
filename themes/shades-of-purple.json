@@ -5,7 +5,7 @@
   "themes": [
     {
       "appearance": "dark",
-      "name": "Shades of Purple",
+      "name": "Shades of Purple (Cravey)",
       "style": {
         "background": "#2D2B55",
         "border": "#A599E933",
@@ -640,7 +640,7 @@
       }
     },
     {
-      "name": "Shades of Purple Super Dark",
+      "name": "Shades of Purple (Cravey) Super Dark",
       "appearance": "dark",
       "style": {
         "background": "#191830",

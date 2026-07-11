@@ -5,8 +5,16 @@ personal customization of the theme (as it looks in his Nova editor extension an
 the VSCode extension it's derived from). Ships as one theme family with two dark
 variants:
 
-- **Shades of Purple** — the regular variant (`#2D2B55` editor background)
-- **Shades of Purple Super Dark** — a darker variant (`#191830` editor background)
+- **Shades of Purple (Cravey)** — the regular variant (`#2D2B55` editor background)
+- **Shades of Purple (Cravey) Super Dark** — a darker variant (`#191830` editor background)
+
+Named with a `(Cravey)` suffix, rather than the plain "Shades Of Purple" /
+"Shades Of Purple (Super Dark)" names, specifically to avoid colliding with
+the [irmhonde/shades-of-purple-theme](https://github.com/irmhonde/shades-of-purple-theme)
+Zed extension this repo forks from — Michael already had that extension
+installed with those exact names wired into `theme.light` / `theme.dark` in
+his `settings.json`. Both can be installed side by side without the theme
+picker showing two identically-named entries.
 
 ## Install
 
@@ -18,8 +26,21 @@ git clone <this repo> ~/Projects/shades-of-purple-zed
 `install.sh` symlinks `themes/shades-of-purple.json` into
 `~/.config/zed/themes/`. Restart Zed (or run `zed: reload extensions` /
 `theme selector: toggle` from the command palette), then pick "Shades of
-Purple" or "Shades of Purple Super Dark" from the theme selector
-(`cmd-k cmd-t`).
+Purple (Cravey)" or "Shades of Purple (Cravey) Super Dark" from the theme
+selector (`cmd-k cmd-t`).
+
+If you also want it to be your actual default (not just available in the
+picker), set it in `~/.config/zed/settings.json`:
+
+```jsonc
+"theme": {
+  "mode": "system",
+  "light": "Shades of Purple (Cravey)",
+  "dark": "Shades of Purple (Cravey) Super Dark"
+}
+```
+
+(This was already done on Michael's machine as part of building this repo.)
 
 To update after pulling changes, just re-run `install.sh` (it's idempotent —
 it replaces the symlink) or, since it's a symlink, do nothing at all; edits to
